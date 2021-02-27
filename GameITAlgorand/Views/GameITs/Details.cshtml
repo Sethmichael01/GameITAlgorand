@@ -1,0 +1,36 @@
+﻿@model GameITAlgorand.Models.GameIT
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>@ViewBag.Success</h4>
+
+<div>
+    <h4>GameIT</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GameName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GameName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GamePrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GamePrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GameDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GameDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
